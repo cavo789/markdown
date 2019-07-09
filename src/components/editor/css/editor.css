@@ -1,0 +1,52 @@
+textarea {
+    margin-top:10px;
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+}
+
+.form-control {
+    padding: none;
+    font-size: 0.8em;
+}
+
+.markdown-body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-height: 80%;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
+}
+
+.input {
+    margin:10px;
+}
+
+.output {
+    margin:10px;
+}
+
+#HTML {
+    max-height:600px;
+}
+
+#HTML_CODE {
+    position: fixed;
+    top: -100px;
+}
+
+.footer {
+    margin: 0;
+    padding: 10px 0 0 0 ;
+    height:40px;
+}
+
+.el-aside {
+    color: #333;
+}

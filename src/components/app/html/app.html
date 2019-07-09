@@ -1,0 +1,7 @@
+<div>
+    <github_corner v-if="isVisible" :github_url='github_url' />
+    <apptitle v-if="isVisible" :title='app_title'
+        :subtitle='app_subtitle'></apptitle>
+    <editor @toggleVisibility="toggleVisibility" />
+    <appfooter v-if="isVisible" />
+</div>

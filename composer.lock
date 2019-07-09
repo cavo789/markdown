@@ -1,0 +1,48 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "c9e1a0488f78ed251bd6a3294ea6668a",
+    "packages": [
+        {
+            "name": "avonture/pandoc",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../pandoc",
+                "reference": "5dfe552acd738fbeb4303ed9e00ce8232e98735d"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.2"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe",
+                    "email": "cavo789@yahoo.com"
+                }
+            ],
+            "description": "PHP class that encapsulates pandoc in order to convert a text in markdown format to doc/odt/pdf/txt/..."
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "avonture/pandoc": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

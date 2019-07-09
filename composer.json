@@ -1,0 +1,20 @@
+{
+    "name": "avonture/markdown",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christophe Avonture",
+            "email": "christophe@avonture.be"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../pandoc/"
+        }
+    ],
+    "require": {
+        "avonture/pandoc": "dev-master"
+    }
+}

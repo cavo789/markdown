@@ -1,0 +1,142 @@
+<el-row :gutter="20" justify="center">
+    <el-col :span="4">
+        <el-aside style="background-color: rgb(238, 241, 246)">
+            <el-menu :default-openeds="['1', '2', '3']">
+                <el-submenu index="1">
+                    <template slot="title">
+                        <i class="el-icon-s-home"></i>Input
+                    </template>
+                    <el-menu-item index="1-1" @click="doInputMD">
+                        <i class="el-icon-star-on"></i>
+                        Markdown
+                    </el-menu-item>
+                    <el-menu-item index="1-2" @click="doInputCSV">
+                        A CSV content
+                    </el-menu-item>
+                    <el-menu-item index="1-3" @click="doInputHTML">
+                        HTML content (or an URL)
+                    </el-menu-item>
+                    <el-menu-item index="1-4" @click="doInputXLS">
+                        Copy/Paste from Excel
+                    </el-menu-item>
+                </el-submenu>
+                <el-submenu index="2" v-if="HTML">
+                    <template slot="title">
+                        <i class="el-icon-more"></i>Action
+                    </template>
+                    <el-menu-item index="2-1" v-if="clipboardEnabled"
+                        class="btnClipboard"
+                        data-clipboard-target="#HTML">Copy output
+                        to clipboard
+                    </el-menu-item>
+                    <el-menu-item index="2-2"
+                        v-if="HTML || clipboardEnabled"
+                        class="btnClipboard"
+                        data-clipboard-target="#HTML_CODE">Copy
+                        HTML code
+                    </el-menu-item>
+                    <el-menu-item index="2-3" @click="doToggle">
+                        <i class="el-icon-magic-stick"></i>
+                        Show/Hide
+                        editor
+                    </el-menu-item>
+                </el-submenu>
+                <el-submenu index="3" v-if="HTML">
+                    <template slot="title">
+                        <i class="el-icon-copy-document"></i>Convert
+                    </template>
+                    <el-menu-item index="3-1" @click="doExportDOCX">
+                        Convert to docx
+                    </el-menu-item>
+                    <el-menu-item index="3-2" @click="doExportEPUB">
+                        Convert to epub
+                    </el-menu-item>
+                    <el-menu-item index="3-3" @click="doExportHTML">
+                        <i class="el-icon-star-on"></i>
+                        Convert to html
+                    </el-menu-item>
+                    <el-menu-item index="3-4" @click="doExportMD">
+                        Convert to markdown
+                    </el-menu-item>
+                    <el-menu-item index="3-5" @click="doExportODT">
+                        Convert to odt
+                    </el-menu-item>
+                    <el-menu-item index="3-6" @click="doExportPDF">
+                        Convert
+                        to pdf
+                    </el-menu-item>
+                    <el-menu-item index="3-7" @click="doExportTXT">
+                        Convert
+                        to txt
+                    </el-menu-item>
+                </el-submenu>
+            </el-menu>
+        </el-aside>
+    </el-col>
+
+    <el-col :span="7" v-if="showEditor" class="input">
+
+        <el-container v-if="inputCSV">
+            <el-main>
+                <h2>CSV</h2>
+                <p>Paste here any CSV content</p>
+                <el-input type="textarea"
+                    :autosize="{ minRows: 5, maxRows: 20  }"
+                    placeholder="Type any CSV code here"
+                    v-model="CSV">
+                </el-input>
+            </el-main>
+        </el-container>
+
+        <el-container v-if="inputHTML">
+            <el-main>
+                <h2>HTML</h2>
+                <p>Type your HTML text here below or type an URL
+                    and let the tool capture the page</p>
+                <el-input type="textarea"
+                    :autosize="{ minRows: 5, maxRows: 20  }"
+                    placeholder="Type any MD code here; with tags"
+                    v-model="HTML">
+                </el-input>
+            </el-main>
+        </el-container>
+
+        <el-container v-if="inputMD">
+            <el-main>
+                <h2>Markdown</h2>
+                <p>Type your markdown text here below</p>
+                <el-input type="textarea"
+                    :autosize="{ minRows: 5, maxRows: 20  }"
+                    placeholder="Type any MD code here; with tags"
+                    v-model="markdown">
+                </el-input>
+            </el-main>
+        </el-container>
+
+        <el-container v-if="inputXLS">
+            <el-main>
+                <h2>XLS</h2>
+                <p>Paste here any range from Excel</p>
+                <el-input type="textarea"
+                    :autosize="{ minRows: 5, maxRows: 20  }"
+                    placeholder="Copy in Excel and paste here"
+                    v-model="XLS">
+                </el-input>
+            </el-main>
+        </el-container>
+
+    </el-col>
+
+    <el-col :span="12" class="output">
+        <el-container v-if="outputHTML">
+            <el-main>
+                <h2>HTML</h2>
+                <article id="HTML" v-html="HTML"
+                    class="markdown-body">
+                </article>
+                <!-- Textarea required for the Copy into clipboard so we can get the HTML code-->
+                <textarea id="HTML_CODE">{{ HTML }}</textarea>
+            </el-main>
+        </el-container>
+    </el-col>
+</el-row>

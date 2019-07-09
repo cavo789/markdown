@@ -1,0 +1,48 @@
+{
+    "pandoc": {
+        "debug": false,
+        "output": {
+            "folder": ""
+        },
+        "supported_types": [
+            "docx",
+            "epub",
+            "odt",
+            "pdf",
+            "txt"
+        ],
+        "export": {
+            "docx": {
+                "template": "template/tmpl.docx",
+                "content": {
+                    "encoding": "binary",
+                    "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                }
+            },
+            "epub": {
+                "content": {
+                    "encoding": "binary",
+                    "type": "application/epub"
+                }
+            },
+            "odt": {
+                "content": {
+                    "encoding": "binary",
+                    "type": "application/vnd.oasis.opendocument.text"
+                }
+            },
+            "pdf": {
+                "content": {
+                    "encoding": "binary",
+                    "type": "application/pdf"
+                }
+            },
+            "txt": {
+                "content": {
+                    "encoding": "ascii",
+                    "type": "text/plain"
+                }
+            }
+        }
+    }
+}
