@@ -8,7 +8,7 @@
             "email": "christophe@avonture.be"
         }
     ],
-    "repositories": [
+    "repositories__": [
         {
             "type": "path",
             "url": "../pandoc/"

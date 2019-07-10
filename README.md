@@ -21,6 +21,13 @@ Do you need a local copy of this script? If no, don't install anything, just use
 
 Otherwise, if you want a copy on your own server; just clone this repository or click on the `[Clone or download](https://github.com/cavo789/markdown/archive/master.zip)` green button and get a copy of the program.
 
+Once installed on your hard disk, open a command prompt and go to the root folder where you've copied the program and run `composer update`:
+
+```bash
+cd c:\repositories\markdown
+composer update
+```
+
 ## Usage
 
 If you've a local webserver (like wamp), create an alias called f.i. `markdown` and set his root folder to the folder where you copied this repository.

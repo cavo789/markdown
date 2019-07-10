@@ -4,15 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9e1a0488f78ed251bd6a3294ea6668a",
+    "content-hash": "bebdb9a62b3106ea6778b685a1d3e04e",
     "packages": [
         {
             "name": "avonture/pandoc",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cavo789/pandoc.git",
+                "reference": "cb6e9ceb80ec169eeb1ff2078e55fbc3a897fcdd"
+            },
             "dist": {
-                "type": "path",
-                "url": "../pandoc",
-                "reference": "5dfe552acd738fbeb4303ed9e00ce8232e98735d"
+                "type": "zip",
+                "url": "https://api.github.com/repos/cavo789/pandoc/zipball/cb6e9ceb80ec169eeb1ff2078e55fbc3a897fcdd",
+                "reference": "cb6e9ceb80ec169eeb1ff2078e55fbc3a897fcdd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.2"
@@ -23,16 +32,29 @@
                     "src/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Christophe",
-                    "email": "cavo789@yahoo.com"
+                    "name": "Christophe Avonture",
+                    "email": "christophe@avonture.be"
                 }
             ],
-            "description": "PHP class that encapsulates pandoc in order to convert a text in markdown format to doc/odt/pdf/txt/..."
+            "description": "PHP class that encapsulates pandoc in order to convert a text in markdown format to doc/odt/pdf/txt/...",
+            "homepage": "https://github.com/cavo789/pandoc",
+            "keywords": [
+                "convert",
+                "markdown",
+                "md2docx",
+                "md2odt",
+                "md2pdf",
+                "md2txt",
+                "pandoc",
+                "php"
+            ],
+            "time": "2019-07-10T18:22:10+00:00"
         }
     ],
     "packages-dev": [],
