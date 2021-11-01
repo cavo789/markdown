@@ -1,6 +1,6 @@
-![banner](image/banner.png)
-
 # markdown
+
+![banner](./banner.svg)
 
 **WORK IN PROGRESS**
 
